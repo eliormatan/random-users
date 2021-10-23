@@ -21,7 +21,7 @@ function createMap() {
     const marker = new google.maps.Marker({
         position: mapLocation,
         map,
-        title: "Hello World!",
+        title: user.fullName,
     });
 }
 
