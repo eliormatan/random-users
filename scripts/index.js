@@ -32,13 +32,14 @@ function initializePage() {
     store.loadPage(PAGE).then((users) => {
         const tbody = document.querySelector('#usersTable tbody');
 
-        tbody.innerHTML = users.map((user, idx) => {
+        //for option 1 or 2 while loading user
+        // <tr class="clickable" onclick="window.location='user.html?username=${user.username}'">
+
+        tbody.innerHTML = users.map((user, index) => {
             return `
-                <tr>
+                <tr class="clickable" onclick="window.location='user.html?username=${user.username}&page=${PAGE}&index=${index}'">
                     <td>
-                        <a href="user.html?username=${user.username}">
-                            <img class="rounded-circle" width="48" height="48" src="${user.thumbnail}" />
-                        </a>
+                        <img class="rounded-circle" width="48" height="48" src="${user.thumbnail}" />
                     </td>
                     <td>${user.fullName}</td>
                     <td><a href="mailto:${user.email}">${user.email}</a></td>
