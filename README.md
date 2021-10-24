@@ -41,9 +41,9 @@ and finally call initializePage function with the updated page number so it will
 
 
 ### Design comments
-- I chose to add the page number to the search bar because I needed a way to save the page's state,so i will get to the right page as before and not the first page in case of refresh or back from a user page. Also if I want to send the link to someone ,it will open in the right page.
+- I chose to add the page number to the query string because I needed a way to save the page's state, so I will get to the right page as before and not the first page in case of refresh or back from a user page. Also if I want to send the link to someone ,it will open in the right page.
 
-- I chose to implement the site with vanilla javascript (without any framework like React) because I wanted to use javascript APIs myself.
+- I chose to implement the site with vanilla javascript (without any framework like React) because I wanted to use javascript APIs and DOM manipulations myself.
 
 ### Problems:
 
